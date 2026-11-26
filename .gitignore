@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+!frontend/.env.production
+
+# Local runtime uploads & binaries
+backend/uploads/
+cloudflare/
+*.exe
+
+# Build & deploy caches
+dist/
+dist-ssr/
+.firebase/
+*.log

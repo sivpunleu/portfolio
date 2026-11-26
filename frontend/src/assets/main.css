@@ -1,0 +1,198 @@
+/* =========================================================
+   PORTFOLIO DESIGN SYSTEM (Global Tokens, Base, Forms, Alerts)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  --primary: #0e2431;
+  --primary-accent: #2506ad;
+  --secondary: #ff7b00;
+  --accent-yellow: #facc15;
+  --accent-purple: #4f46e5;
+  --accent-cyan: #06b6d4;
+  --bg-light: #ffffff;
+  --bg-section: #f7f9fc;
+  --bg-dark: #0b0f19;
+  --text-main: #0e2431;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', 'Kantumruy Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* ================= CONTAINER & SECTION ================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section,
+section[id] {
+  scroll-margin-top: 74px;
+}
+
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-bg {
+  background-color: var(--bg-section);
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-light);
+  box-shadow: 0 6px 15px rgba(14, 36, 49, 0.25);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 6, 173, 0.35);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--text-light);
+  box-shadow: 0 6px 15px rgba(255, 123, 0, 0.25);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e06d00;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 123, 0, 0.35);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--primary);
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ================= FORMS & ALERTS ================= */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--primary);
+  transition: var(--transition);
+  background: #fdfdfd;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 4px rgba(37, 6, 173, 0.1);
+  background: #ffffff;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.alert {
+  padding: 0.85rem 1.15rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.alert-warning {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
